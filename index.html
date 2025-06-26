@@ -47,7 +47,7 @@
     <div class="max-w-3xl mx-auto">
       <h2 class="text-3xl font-bold mb-4 text-center">Contáctanos</h2>
       <p class="text-lg mb-8 text-center">¿Te interesa formar parte del Coworking Verde Municipal? Déjanos tus datos y te mantendremos informado.</p>
-      <form action="https://formspree.io/f/xwkgrdke" method="POST" class="space-y-6">
+      <form action="https://formsubmit.co/jesuslgs76@gmail.com" method="POST" class="space-y-6">
         <div>
           <label for="nombre" class="block text-sm font-medium">Nombre completo</label>
           <input type="text" name="nombre" id="nombre" required class="w-full px-4 py-2 border rounded-lg">
@@ -63,6 +63,8 @@
         <div class="text-center">
           <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold">Enviar</button>
         </div>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="confirmado.html">
       </form>
     </div>
   </section>
@@ -73,11 +75,10 @@
   </footer>
 
   <script>
-    // Simulación de contador dinámico (esto sería reemplazado por datos reales en una versión con backend)
     let contador = 137;
     const contadorElemento = document.getElementById("contador");
     setInterval(() => {
-      contador += Math.floor(Math.random() * 2); // Suma 0 o 1 de forma aleatoria
+      contador += Math.floor(Math.random() * 2);
       contadorElemento.textContent = contador;
     }, 5000);
   </script>
