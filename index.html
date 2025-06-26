@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coworking Verde Municipal | Agaete</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center h-screen text-white" style="background-image: url('https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1950&q=80');">
+    <div class="bg-black bg-opacity-50 w-full h-full absolute top-0 left-0"></div>
+    <div class="relative z-10 flex items-center justify-center h-full text-center px-6">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Coworking Verde Municipal</h1>
+        <p class="text-lg md:text-2xl mb-6">Un espacio sostenible para trabajar, crear y transformar Agaete</p>
+        <a href="#contacto" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full text-lg font-semibold transition">Quiero participar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Informativa -->
+  <section class="py-16 px-6 md:px-20 bg-gray-100">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Qué es el Coworking Verde Municipal?</h2>
+      <p class="text-lg mb-8">Un espacio creado desde lo público para que autónomos, jóvenes, profesionales y ciudadanos puedan trabajar juntos, compartir ideas, acceder a internet de alta velocidad y participar en una comunidad comprometida con el desarrollo sostenible de Agaete.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <img class="rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" alt="Coworking 1">
+        <img class="rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1593642634443-44adaa06623a?auto=format&fit=crop&w=800&q=80" alt="Coworking 2">
+        <img class="rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?auto=format&fit=crop&w=800&q=80" alt="Coworking 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contador de Participantes -->
+  <section class="py-16 px-6 md:px-20 bg-white">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Personas interesadas hasta ahora</h2>
+      <p class="text-6xl text-green-600 font-extrabold" id="contador">137</p>
+      <p class="text-gray-600 mt-2">¡Y sigue creciendo!</p>
+    </div>
+  </section>
+
+  <!-- Formulario de Contacto -->
+  <section id="contacto" class="py-16 px-6 md:px-20 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-center">Contáctanos</h2>
+      <p class="text-lg mb-8 text-center">¿Te interesa formar parte del Coworking Verde Municipal? Déjanos tus datos y te mantendremos informado.</p>
+      <form action="https://formspree.io/f/xwkgrdke" method="POST" class="space-y-6">
+        <div>
+          <label for="nombre" class="block text-sm font-medium">Nombre completo</label>
+          <input type="text" name="nombre" id="nombre" required class="w-full px-4 py-2 border rounded-lg">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium">Correo electrónico</label>
+          <input type="email" name="email" id="email" required class="w-full px-4 py-2 border rounded-lg">
+        </div>
+        <div>
+          <label for="mensaje" class="block text-sm font-medium">¿Cómo te gustaría participar?</label>
+          <textarea name="mensaje" id="mensaje" rows="4" class="w-full px-4 py-2 border rounded-lg"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p class="text-sm">&copy; 2025 Coworking Verde Municipal | Contacto: jesuslgs76@gmail.com</p>
+  </footer>
+
+  <script>
+    // Simulación de contador dinámico (esto sería reemplazado por datos reales en una versión con backend)
+    let contador = 137;
+    const contadorElemento = document.getElementById("contador");
+    setInterval(() => {
+      contador += Math.floor(Math.random() * 2); // Suma 0 o 1 de forma aleatoria
+      contadorElemento.textContent = contador;
+    }, 5000);
+  </script>
+
+</body>
+</html>
